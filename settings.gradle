@@ -1,0 +1,4 @@
+rootProject.name = 'simpler-embedded-jetty'
+
+include ':simpler'
+project(':simpler').projectDir = new File(settingsDir, "../simpler")
