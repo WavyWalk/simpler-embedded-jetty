@@ -1,8 +1,6 @@
 # Waht's it
 An embedded server for dev purposes to use with simpler framework
 # how to install
-it's not on the repo engines, so just clone it in your project PARENT folder.
-in your project's settings.graddle add:
 ```kotlin
 //build.gradle
 repositories {
