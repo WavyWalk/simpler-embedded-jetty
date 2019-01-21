@@ -3,13 +3,19 @@ An embedded server for dev purposes to use with simpler framework
 # how to install
 it's not on the repo engines, so just clone it in your project PARENT folder.
 in your project's settings.graddle add:
-```groovy
-include ':simpler-embedded-jetty'  
-project(':simpler-embedded-jetty').projectDir = new File(settingsDir, "../simpler-embedded-jetty")
-```
-in build.graddle:
-```groovy
-compile project(':simpler-embedded-jetty')
+```kotlin
+//build.gradle
+repositories {
+    mavenCentral()
+    maven {
+        url  "https://dl.bintray.com/wavywalk/maven" //add this repo
+    }
+}
+
+dependencies {
+    compile 'at.wavywalk.simpler:simpler-embedded-jetty:0.1.0:sources'
+    compile 'at.wavywalk.simpler:simpler-embedded-jetty:0.1.0'
+}
 ```
 # How to use with simpler
 Simpler is supposed to run in servlet container. 
